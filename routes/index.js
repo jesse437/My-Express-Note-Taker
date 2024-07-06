@@ -7,6 +7,6 @@ module.exports = (app) => {
   });
   // Here im doing the same thing for the notes.html file
   app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/note.html"));
+    res.sendFile(path.join(__dirname, "../public/notes.html"));
   });
 };
