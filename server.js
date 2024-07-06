@@ -10,6 +10,8 @@ const path = require('path');
 // Here I am using the app variable to declare the express function
 const app = express();
 app.use(express.static("public"));
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

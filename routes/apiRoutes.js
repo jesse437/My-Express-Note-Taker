@@ -7,17 +7,15 @@ const uniqid = require("uniqid");
 const express = require("express");
 const { title } = require("process");
 
-
-
 // Now im using the module.exports to esport the db.json file
 module.exports = (app) => {
   app.get("/api/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "../db/db.json"));
+    res.sendFile(path.join(__dirname, "./db/db.json"));
   });
   // post request
   app.post("/api/notes", (req, res) => {
     // reading the existing db file. to read the notes a;ready present in json
-    let db = fs.readFileSync("../db/db.json");
+    let db = fs.readFileSync("./db/db.json");
     // parsing the DB json file
     db = JSON.parse(db);
     res.json(db);
@@ -28,10 +26,8 @@ module.exports = (app) => {
       id: uniqid(),
     };
     db.push(userNote);
-    fs.writeFileSync("../db/db.json", JSON.stringify(db));
+    fs.writeFileSync("./db/db.json", JSON.stringify(db));
     res.json(db);
     console.info(`${req.method} request reviews and recieved`);
   });
 };
-
-
