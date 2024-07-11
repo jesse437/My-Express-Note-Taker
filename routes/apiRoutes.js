@@ -10,7 +10,7 @@ const { title } = require("process");
 // Now im using the module.exports to esport the db.json file
 module.exports = (app) => {
   app.get("/api/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "./db/db.json"));
+    res.sendFile(path.join(__dirname, "../db/db.json"));
   });
   // post request
   app.post("/api/notes", (req, res) => {
@@ -30,4 +30,16 @@ module.exports = (app) => {
     res.json(db);
     console.info(`${req.method} request reviews and recieved`);
   });
-};
+  
+  app.delete(`/api/notes/:id`, (req, res) => {
+    
+    let db = fs.readFileSync("./db/db.json");
+    // parsing the DB json file
+    db = JSON.parse(db);
+    let deletedNotes = db.filter(item => item.id != req.params.id) 
+    fs.writeFileSync("./db/db.json", JSON.stringify(deletedNotes))
+    console.log("id data: ", req.params.id, item.id);
+    res.json(deletedNotes);
+  })
+
+}
