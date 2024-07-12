@@ -22,9 +22,22 @@ THEN that note appears in the right-hand column and a "New Note" button appears 
 WHEN I click on the "New Note" button in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column and the button disappears
 
-```
+# 3. How to Use
 
+### In order to run this website we need to use node commands. Because Express.js is a Node.js framework the command we will be using is node followed by the file in this case server.js directly from the terminal. On the terminal youll see a port number displayed. This will indicate the user that the front and backend is connected. Now we can type http://localhost/:5500 on the browser.
 
+# 4. Deployment
 
+# https://github.com/jesse437/My-Express-Note-Taker
 
-```
+# 5. Visuals
+
+![alt text](image/NOTE-TAKER.png)
+
+# 6. Collaborators
+
+## [Jesus Ruiz Gutierrez](https://github.com/jesse437)
+
+# 7. Technologies Used
+
+- Express.js
