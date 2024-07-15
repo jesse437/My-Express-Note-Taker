@@ -28,7 +28,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 # 4. Deployment
 
-# https://github.com/jesse437/My-Express-Note-Taker
+### https://github.com/jesse437/My-Express-Note-Taker
 
 # 5. Visuals
 
@@ -36,7 +36,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 # 6. Collaborators
 
-## [Jesus Ruiz Gutierrez](https://github.com/jesse437)
+### [Jesus Ruiz Gutierrez](https://github.com/jesse437)
 
 # 7. Technologies Used
 
